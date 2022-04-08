@@ -1,0 +1,65 @@
+.price_list {
+    padding: 0 40px;
+    min-height: 350px;
+    &_title_min {
+        text-align: center;
+        @include before-round;
+        &:before {
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &_wrapper {
+        padding: 0 30px;
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include for-992 {
+            justify-content: space-around;
+        }
+    }
+    &_divider {
+        @include divider;
+    }
+    &_item {
+        margin-bottom: 20px;
+        width: 340px;
+        @include for-576 {
+            width: 300px;
+        }
+        .price_work {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .list_of_works {
+            margin-top: 5px;
+            font: var(--font-text-12fz);
+        }
+        .service {
+            width: 200px;
+            @include before-round;
+            &:before {
+                content: "";
+                position: absolute;
+                border-radius: 100%;
+                width: 15px;
+                height: 15px;
+                background: #ffa501;
+                left: -30px;
+                top: 50%;
+                transform: translateY(-50%);
+                @include for-576 {
+                    display: none;
+                }
+            }
+        }
+    }
+    .price_column {
+        @include for-992 {
+            margin: 0 40px;
+        }
+    }
+}

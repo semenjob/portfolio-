@@ -1,0 +1,110 @@
+.skills {
+    padding-bottom: 120px;
+    min-height: 800px;
+    &_title_min {
+        text-align: center;
+        @include before-round;
+        &:before {
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &_section_title {
+        margin-top: 6px;
+    }
+    &_divider {
+        @include divider;
+    }
+    &_wrapper {
+        padding: 0 80px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 135px;
+        justify-content: center;
+        @include for-1200 {
+            column-gap: 70px;
+        }
+        @include for-992 {
+            grid-template-columns: 425px;
+        }
+        @include for-576 {
+            grid-template-columns: 300px;
+        }
+    }
+    &_column {
+        margin-top: 30px;
+        .title_min {
+            position: relative;
+            padding-left: 45px;
+            &:before {
+                content: "";
+                position: absolute;
+                border-radius: 100%;
+                width: 15px;
+                height: 15px;
+                background: #ffa501;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 1.2px;
+                    height: 100%;
+                    left: -25px;
+                    top: -7px;
+                    background-color: var(--color-dividers);
+                }
+            }
+        }
+    }
+    &_item {
+        position: relative;
+        &:before {
+            content: "";
+            width: 73px;
+            height: 1px;
+            background-color: var(--color-dividers);
+            position: absolute;
+            top: 63px;
+            left: -24px;
+            @include for-576 {
+                width: 42px;
+            }
+        }
+    }
+    &_head_text {
+        padding-top: 45px;
+        padding-left: 100px;
+        span {
+            font: var(--font-title-subtitle);
+        }
+        @include for-576 {
+            padding-left: 80px;
+        }
+    }
+    &_description {
+        margin-top: 12px;
+        padding-left: 45px;
+        @include for-576 {
+            padding-left: 15px;
+        }
+    }
+    &_icon {
+        position: absolute;
+        top: 55px;
+        left: 59px;
+        padding: 9px 0 0 9px;
+        @include before-round;
+        @include for-576 {
+            left: 28px;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@mixin for-1400 {
+    @media (max-width: 1439px) {
+        @content;
+    }
+}
+@mixin for-1200 {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+@mixin for-992 {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+@mixin for-768 {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin for-576 {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin before-round {
+    &:before {
+        content: "";
+        position: absolute;
+        top: -25%;
+        left: -10px;
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        background-color: var(--main-color);
+        z-index: -1;
+    }
+}
+@mixin divider {
+    content: "";
+    margin: 25px auto 0;
+    width: 60px;
+    height: 0px;
+    border: 3px solid var(--main-color);
+}

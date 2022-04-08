@@ -1,0 +1,83 @@
+.menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: -100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    transition: all 0.6s;
+    &.active {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    &_block {
+        padding: 140px 0 0 40px;
+        width: 345px;
+        background-color: var(--main-color);
+        height: 100%;
+        position: relative;
+        z-index: 10;
+        @include for-576 {
+            width: 250px;
+        }
+    }
+    &_close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+        @include for-768 {
+            img {
+                width: 20px;
+            }
+        }
+    }
+    &_list {
+        list-style-type: none;
+        padding-left: 35px;
+        a {
+            text-decoration: none;
+            color: var(--color-dividers);
+        }
+    }
+    &_link {
+        margin-bottom: 15px;
+        &:before {
+            content: "";
+            top: 2px;
+            left: -35px;
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            border: 1px solid var(--color-dividers);
+            position: absolute;
+            transition: all 0.6s;
+        }
+        &:hover {
+            &:before {
+                background-color: var(--color-withe);
+            }
+        }
+    }
+    &_social {
+        position: absolute;
+        bottom: 55px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+        height: 20px;
+        width: 90px;
+    }
+    &_overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-withe);
+        opacity: 0.75;
+    }
+}
