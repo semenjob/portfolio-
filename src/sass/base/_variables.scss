@@ -1,0 +1,35 @@
+:root {
+    --main-color: #ffba01; //#a79709
+    --color-dividers: #000000;
+    --color-withe: #ffffff;
+    --color-statistic: #e8e4de;
+    --color-back: #e7e7e7;
+
+    --font-size-title-subtitle: 18px;
+    --font-size-all-text: 16px;
+    --font-size-section: 36px;
+    --font-size-main-title: 50px;
+    --font-size-14fz: 14px;
+    --font-size-main-mobile: 32px;
+    --font-size-section-mobile: 26px;
+
+    --font-weight-bolt: 700;
+    --font-weight-medium: 500;
+
+    --font-family: "El Messiri";
+
+    --font-title-subtitle: var(--font-weight-bolt)
+        var(--font-size-title-subtitle) var(--font-family);
+    --font-title-main: var(--font-weight-bolt) var(--font-size-main-title)
+        var(--font-family);
+    --font-text: var(--font-weight-medium) var(--font-size-all-text)
+        var(--font-family);
+    --font-size-section-block: var(--font-weight-medium)
+        var(--font-size-section) var(--font-family);
+    --font-text-14fz: var(--font-weight-medium) var(--font-size-14fz)
+        var(--font-family);
+    --font-text-32-main: var(--font-weight-bolt) var(--font-size-main-mobile)
+        var(--font-family);
+    --font-size-26-section: var(--font-weight-medium)
+        var(--font-size-section-mobile) var(--font-family);
+}

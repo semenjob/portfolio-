@@ -1,0 +1,40 @@
+.promo {
+    min-height: 100vh;
+    padding-top: 205px;
+    background: url(../../img/main_bg.jpg) center center/cover no-repeat;
+    .container {
+        @include for-1200 {
+            padding: 0 15px;
+        }
+    }
+    .title_min {
+        z-index: 1;
+        margin-left: 10px;
+        @include before-round;
+    }
+    h1 {
+        width: 535px;
+        margin-top: 10px;
+        @include for-576 {
+            width: 305px;
+            font: var(--font-text-32-main);
+        }
+    }
+    &_btn {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        width: 250px;
+        text-align: center;
+        align-items: center;
+        a {
+            color: var(--color-dividers);
+            text-decoration: none;
+        }
+    }
+    &_link_btn {
+        background: var(--main-color);
+        padding: 12px 25px;
+        border-radius: 3px;
+    }
+}

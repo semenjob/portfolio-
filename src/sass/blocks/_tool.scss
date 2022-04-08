@@ -1,0 +1,91 @@
+.tool {
+    padding: 0 0 120px 0;
+    min-height: 1200px;
+    &_title_min {
+        text-align: center;
+        @include before-round;
+        &:before {
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &_section_title {
+        margin-top: 6px;
+    }
+    &_divider {
+        @include divider;
+    }
+    .subtitle_tool {
+        margin-top: 24px;
+    }
+
+    &_description {
+        font: var(--font-text-12fz);
+        margin-top: 15px;
+    }
+    &_wrapper {
+        margin-top: 60px;
+        padding-bottom: 120px;
+        display: grid;
+        grid-template: repeat(2, minmax(270px, auto)) / repeat(auto-fit, 270px);
+        grid-auto-rows: minmax(270px, auto);
+        justify-content: space-around;
+        gap: 13px;
+    }
+    &_row {
+        padding: 30px 30px 25px 30px;
+        width: 270px;
+        border: 1px solid var(--color-dividers);
+    }
+    .statistic {
+        padding: 0 15px;
+        display: grid;
+        grid-template: repeat(2, minmax(70px, auto)) / repeat(3, 350px);
+        justify-content: space-around;
+        gap: 30px 45px;
+        @include for-1200 {
+            grid-template: repeat(2, minmax(70px, auto)) / repeat(
+                    auto-fit,
+                    350px
+                );
+        }
+        @include for-576 {
+            grid-template: repeat(2, minmax(70px, auto)) / repeat(
+                    auto-fit,
+                    300px
+                );
+        }
+        @include for-576 {
+            justify-content: center;
+        }
+        &_item {
+            width: 350px;
+            @include for-576 {
+                width: 300px;
+            }
+        }
+        &_title {
+            @include before-round;
+        }
+        &_interest {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &_scale {
+            margin-top: 27px;
+            width: 100%;
+            height: 14px;
+            background: var(--color-statistic);
+            border-radius: 4px;
+            span {
+                height: 100%;
+                display: block;
+                border-radius: 4px;
+                width: 20%;
+                background-color: var(--main-color);
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.side_angle {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+    z-index: 3;
+    align-items: center;
+    @include for-1400 {
+        display: none;
+    }
+    &_divider {
+        width: 2px;
+        height: 70px;
+        background: var(--color-dividers);
+    }
+    &_text {
+        height: 150px;
+        width: 25px;
+        font: var(--font-title-subtitle);
+        span {
+            display: block;
+            transform: rotate(-90deg) translate(-40%, -230%);
+            width: 150px;
+        }
+    }
+}
