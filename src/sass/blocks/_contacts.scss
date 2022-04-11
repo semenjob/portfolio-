@@ -33,6 +33,7 @@
     }
     &_title_min {
         margin-left: 12px;
+        z-index: 1;
         @include before-round;
     }
     &_section_title {

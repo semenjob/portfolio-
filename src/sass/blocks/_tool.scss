@@ -4,6 +4,7 @@
     &_title_min {
         text-align: center;
         @include before-round;
+        z-index: 1;
         &:before {
             top: -5px;
             left: 50%;

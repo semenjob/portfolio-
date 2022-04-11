@@ -3,6 +3,7 @@
     min-height: 800px;
     &_title_min {
         text-align: center;
+        z-index: 1;
         @include before-round;
         &:before {
             top: -5px;

@@ -3,6 +3,7 @@
     min-height: 350px;
     &_title_min {
         text-align: center;
+        z-index: 1;
         @include before-round;
         &:before {
             top: -5px;
@@ -40,6 +41,7 @@
         }
         .service {
             width: 200px;
+            z-index: 1;
             @include before-round;
             &:before {
                 content: "";
